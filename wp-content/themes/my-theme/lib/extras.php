@@ -19,6 +19,10 @@ function body_class($classes) {
   if (Setup\display_sidebar()) {
     $classes[] = 'sidebar-primary';
   }
+  //Add class if you’re viewing a single post from multiple custom post types
+  if (is_singular(['book', 'screencast', 'plugin'])) {
+    $classes[] = 'product';
+  }
 
   return $classes;
 }
