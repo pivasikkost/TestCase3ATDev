@@ -18,6 +18,8 @@
     // All pages
     'common': {
       init: function() {
+        $('.slider').slick();
+        console.log('in common now');
         // JavaScript to be fired on all pages
       },
       finalize: function() {
