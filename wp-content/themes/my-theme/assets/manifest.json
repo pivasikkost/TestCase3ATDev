@@ -4,17 +4,11 @@
       "files": [
         "scripts/main.js"
       ],
-      "bower":[
-        "slick-carousel"
-      ],
       "main": true
     },
     "main.css": {
       "files": [
         "styles/main.scss"
-      ],
-      "bower":[
-        "slick-carousel"
       ],
       "main": true
     },

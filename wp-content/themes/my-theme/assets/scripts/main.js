@@ -18,7 +18,15 @@
     // All pages
     'common': {
       init: function() {
-        $('.slider').slick();
+        //$('.slider').slick();
+        var mySwiper = new Swiper ('.swiper-container', {
+          loop: true,
+          // Navigation arrows
+          navigation: {
+            nextEl: '.splash-next',
+            prevEl: '.splash-prev',
+          }
+        });
         console.log('in common now');
         // JavaScript to be fired on all pages
       },

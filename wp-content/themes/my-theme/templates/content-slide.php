@@ -11,9 +11,6 @@
       <div class="content">
         <?= get_field('description')?>
       </div>
-      <div class="other">
-        <?= get_field('other')?>
-      </div>
       <div class="button primary">
         <a class="btn" href="<?= get_field('buy_ticket_link')?>" title="Buy Tickets">Buy tickets</a>
       </div>
