@@ -1,7 +1,7 @@
 <?php 
   $image = get_field('image');
 ?>
-<div class="splash-image" style="background-image: url('<?= $image['url']; ?>')">
+<div class="splash-image<?php if(get_field('dark_image')): echo ' dark'; endif;?>" style="background-image: url('<?= $image['url']; ?>')">
   <div class="container">
     <div class="splash-content">
       <header class="title">

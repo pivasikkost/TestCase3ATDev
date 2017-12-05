@@ -18,16 +18,18 @@
     // All pages
     'common': {
       init: function() {
-        //$('.slider').slick();
         var mySwiper = new Swiper ('.swiper-container', {
           loop: true,
+          autoplay: {
+            delay: 5000,
+          },
+          speed: 1000,
           // Navigation arrows
           navigation: {
             nextEl: '.splash-next',
             prevEl: '.splash-prev',
           }
         });
-        console.log('in common now');
         // JavaScript to be fired on all pages
       },
       finalize: function() {

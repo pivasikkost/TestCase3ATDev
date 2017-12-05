@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #3B3D40;
+}
+
+a {
+  background-color: transparent;
+}
+
+.splash-section {
+  padding: 1px 0 0;
+  position: relative;
+  display: block;
+}
+
+.swiper-container {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.splash-section .splash-image {
+  height: 570px;
+  background: {
+    color: #d5d5d5;
+    size: cover;
+    position: 50% 50%;
+  }
+  padding: 80px 0 70px;
+}
+
+.splash-section .splash-image.dark {
+  color: #fff;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 20px;
+  padding-right: 25px;
+}
+
+.container::before{
+  content: " ";
+  display: table;
+}
+
+.container::after{
+  @extend .container::before;
+}
+
+.splash-content {
+  float: left;
+  width: 33.33333333%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.splash-content > * {
+  text-align: left;
+}
+
+.header {
+  display:block;
+}
+
+.splash-content h1 {
+  margin-bottom: 21px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 42px;
+}
+
+ .splash-divider {
+  background-color: #fa3c37;
+  height: 3px;
+  width: 58px;
+  margin: -10.5px 0 21px;
+}
+
+.splash-content .button {
+  margin-top: 21px;
+}
+.btn{
+  @include button-size(6px, 12px, 14px, 1.5, 4px);
+  @include button-outline-variant(#fff);
+  text-transform: uppercase;
+}
+
+.button.primary .btn{
+  @extend .btn;
+  @include button-variant(#fa3c37, #f80c06, #fb6d69);
+}
+
+.splash-image:not(.dark) .secondary .btn {
+  @include button-outline-variant(#3b3d40);
+}
+
+.button.secondary .btn{
+  @extend .btn;
+  //@extend .splash-image:not(.dark) .secondary .btn;
+  @include button-variant(transparent, #fff, rgba(255, 255, 255, 0.4));
+}
+
+.splash-section .splash-prev, 
+.splash-section .splash-next {
+  height: 56px;
+  width: 56px;
+  position: absolute;
+  top: 43%;
+  z-index: 2;
+  cursor: pointer;
+  display: block;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.splash-section .splash-prev {
+  left: 20px;
+  background-image: url("../images/icons/VTSL-slider-arrow-left-1x.png");
+}
+
+.splash-section .splash-next {
+  right: 20px;
+  background-image: url("../images/icons/VTSL-slider-arrow-right-1x.png");
+}
+
+.splash-triangle {
+  margin-top: -12px;
+  height: 12px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.splash-triangle span::after, 
+.splash-triangle span::before {
+  background-color: #fff;
+  content: " ";
+  height: 12px;
+  position: absolute;
+  width: 50%;
+  transform-origin: 100% 100%;
+}
+
+.splash-triangle span::before {
+  left: 0;
+  transform: skewX(45deg);
+}
+
+.splash-triangle span::after {
+  right: 0;
+  transform: skewX(-45deg);
+}
