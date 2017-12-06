@@ -24,3 +24,4 @@
 </div>
 <div class="splash-prev"></div>
 <div class="splash-next"></div>
+<div class="splash-pagination"></div>

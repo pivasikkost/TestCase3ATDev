@@ -28,6 +28,10 @@
           navigation: {
             nextEl: '.splash-next',
             prevEl: '.splash-prev',
+          },
+          pagination: {
+            el: '.splash-pagination',
+            clickable: true,
           }
         });
         // JavaScript to be fired on all pages
