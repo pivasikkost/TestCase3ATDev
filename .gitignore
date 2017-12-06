@@ -104,3 +104,6 @@ Thumbs.db
 !wp-content/mu-plugins/example-mu-plugin/
 !wp-content/plugins/example-plugin/
 !wp-content/themes/my-theme/
+
+# custom additions
+wp-config.php
