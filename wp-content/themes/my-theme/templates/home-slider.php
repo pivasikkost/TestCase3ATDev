@@ -15,19 +15,29 @@
             <div class="splash-image<?php if($dark_image): echo ' dark'; endif;?>" style="background-image: url('<?= $image['url']; ?>')">
               <div class="container">
                 <div class="splash-content">
-                  <header class="title">
-                    <h1><?= $title ?></h1>
-                  </header>
-                  <div class="splash-divider"></div>
-                  <div class="content">
-                    <?= $description ?>
-                  </div>
-                  <div class="button primary">
-                    <a class="btn" href="<?= $buy_ticket_link ?>" title="Buy Tickets">Buy tickets</a>
-                  </div>
-                  <div class="button secondary">
-                    <a class="btn" href="<?= $learn_more_link ?>" title="Learn More">Learn more</a>
-                  </div>
+                  <?php if( $title ): ?>
+                    <header class="title">
+                      <h1><?= $title ?></h1>
+                    </header>
+                  <?php endif; ?>
+                  <?php if( $title && $description ): ?>
+                    <div class="splash-divider"></div>
+                  <?php endif; ?>
+                  <?php if( $description ): ?>
+                    <div class="content">
+                      <?= $description ?>
+                    </div>
+                  <?php endif; ?>
+                  <?php if( $buy_ticket_link ): ?>
+                    <div class="button primary">
+                      <a class="btn" href="<?= $buy_ticket_link ?>" title="Buy Tickets">Buy tickets</a>
+                    </div>
+                  <?php endif; ?>
+                  <?php if( $learn_more_link ): ?>
+                    <div class="button secondary">
+                      <a class="btn" href="<?= $learn_more_link ?>" title="Learn More">Learn more</a>
+                    </div>
+                  <?php endif; ?>
                 </div>
               </div>
             </div>
