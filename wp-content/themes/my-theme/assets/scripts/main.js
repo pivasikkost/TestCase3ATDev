@@ -18,7 +18,7 @@
     // All pages
     'common': {
       init: function() {
-        var mySwiper = new Swiper ('.swiper-container', {
+        new Swiper ('.swiper-container', {
           loop: true,
           autoplay: {
             delay: 5000,

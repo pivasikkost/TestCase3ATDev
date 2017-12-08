@@ -24,7 +24,8 @@
     height: 56px;
     width: 56px;
     position: absolute;
-    top: 43%;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 2;
     cursor: pointer;
     display: block;
@@ -119,10 +120,10 @@
   min-height: 1px;
   padding-left: 20px;
   padding-right: 20px;
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(md) {
     width: 50%
   }
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     width: 33.33333333%;
   }
   > * {
