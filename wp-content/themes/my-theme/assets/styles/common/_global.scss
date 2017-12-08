@@ -1,1 +1,14 @@
+* {
+  box-sizing: border-box;
+}
 
+body {
+  font-family: $basic-font;
+  font-size: $basic-font-size;
+  line-height: 1.5;
+  color: $basic-color;
+}
+
+a {
+  background-color: $bg-no-active;
+}

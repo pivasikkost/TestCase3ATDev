@@ -1,0 +1,26 @@
+.btn{
+  @include button-size(6px, 12px, $basic-font-size, 1.5, 4px);
+  @include button-outline-variant($white);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  @include media-breakpoint-down(xs) {
+    display: block;
+    width: 100%;
+  }
+}
+
+.button {
+  margin-top: 21px;
+  &.primary .btn{
+    @extend .btn;
+    @include button-variant($red, $red-border, $red-hover);
+  }
+  &.secondary .btn{
+    @extend .btn;
+    @include button-variant($bg-no-active, $white, $white-hover);
+  }
+}
+
+.splash-image:not(.dark) .secondary .btn {
+  @include button-outline-variant($basic-color);
+}
